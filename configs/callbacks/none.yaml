@@ -1,0 +1,5 @@
+defaults:
+  # - model_checkpoint.yaml
+  # - early_stopping.yaml
+  # - model_summary.yaml
+  -_self_

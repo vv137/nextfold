@@ -1,0 +1,22 @@
+defaults:
+  - alphafold_monomer_shared
+  - _self_
+
+feature:
+  common:
+    max_extra_msa: 5120
+    reduce_msa_clusters_by_max_templates: true
+    use_templates: true
+
+network:
+  embedding:
+    template:
+      embed_torsion_angles: true
+      enabled: true
+
+loss:
+  predicted_aligned_error:
+    weight: 0.1
+
+globals:
+  name: alphafold_model_1_ptm

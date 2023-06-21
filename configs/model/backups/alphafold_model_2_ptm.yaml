@@ -1,0 +1,19 @@
+defaults:
+  - alphafold_monomer_shared
+  - _self_
+
+data:
+  reduce_msa_clusters_by_max_templates: true
+  use_templates: true
+
+model:
+  embeddings_and_evoformer:
+    template:
+      embed_torsion_angles: true
+      enabled: true
+  heads:
+    predicted_aligned_error:
+      weight: 0.1
+
+globals:
+  name: alphafold_model_2_ptm

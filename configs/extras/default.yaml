@@ -1,0 +1,5 @@
+# Disable python warning
+ignore_warnings: False
+
+# Pretty print config tree at the start of the run
+print_config: True

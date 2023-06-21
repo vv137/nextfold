@@ -1,0 +1,12 @@
+defaults:
+  - alphafold_multimer_shared
+  - _self_
+
+data:
+  train:
+    max_extra_msa: 1152
+  eval:
+    max_extra_msa: 1152
+
+globals:
+  name: alphafold_model_4_multimer_v3

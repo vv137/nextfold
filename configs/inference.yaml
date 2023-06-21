@@ -1,0 +1,19 @@
+# @package _global_
+
+# Specify here default configuration
+defaults:
+  - _self_
+  - data: null
+  - model: alphafold_model_1_ptm.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+task_name: "predict"
+
+tags: ["dev"]
+
+# Passing checkpoint path is necessary for evaluation
+ckpt_path: ???
+
+seed: null

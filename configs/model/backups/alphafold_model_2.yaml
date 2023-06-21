@@ -1,0 +1,21 @@
+# Jumper et al. (2021) Suppl. Table 5, Model 1.1.2
+
+defaults:
+  - alphafold_monomer_shared
+  - _self_
+
+data:
+  common:
+    reduce_msa_clusters_by_max_templates: true
+    use_templates: true
+
+model:
+  embeddings_and_evoformer:
+    template:
+      embed_torsion_angles: true
+      enabled: true
+  heads:
+    predicted_aligned_error: null
+
+globals:
+  name: alphafold_model_2

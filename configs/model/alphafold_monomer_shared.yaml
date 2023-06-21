@@ -1,0 +1,29 @@
+_target_: src.models.alphafold.AlphaFoldMonomerModule
+
+optimizer: null
+
+scheduler: null
+
+globals:
+  is_multimer: false
+
+feature:
+  common:
+
+  predict:
+
+  train:
+
+  eval:
+
+network:
+  globals:
+    num_recylce: 3
+
+  embedding:
+
+  evoformer:
+
+  structure_module:
+
+loss:

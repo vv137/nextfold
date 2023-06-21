@@ -1,0 +1,31 @@
+# @package _global_
+
+# Default debugging setup, runs 1 full epoch.
+
+# Override task name so debugging logs are stored in separate directory
+task_name: "debug"
+
+# Disable callbacks and loggers during debugging
+callbacks: null
+logger: null
+
+extras:
+  ignore_warnings: False
+  enforce_tag: False
+
+# Set level of all command line loggers to 'DEBUG'
+hydra:
+  job_logging:
+    root:
+      level: DEBUG
+  verbose: True
+
+trainer:
+  max_epochs: 1
+  accelerator: cpu
+  devices: 1
+  detect_anomaly: true # Raise exception if NaN or +/-inf is detected in any tensor
+
+data:
+  num_workers: 0 # Debuggers don't like multiprocessing
+  pin_memory: False # Disable GPU memory pinning

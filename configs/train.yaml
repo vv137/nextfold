@@ -1,0 +1,47 @@
+# @package _global_
+
+# Specify here default configuration
+defaults:
+  - _self_
+  - data: null
+  - model: alphafold_model_1_ptm.yaml
+  - callbacks: none.yaml
+  - logger: null
+  - trainer: default.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+  # Experiment configurations allow for version control of specific hyperparameters
+  - experiment: null
+
+  # Hyperparameter optimization
+  - hparams_search: null
+
+  # Optional local configurations for machine/user specific settings
+  - optional local: default.yaml
+
+  # Debugging configurations
+  - debug: null
+
+# Task name, determines output directory path.
+task_name: "predict"
+
+# Tags to help identify experiments
+# Override from command line with `python train.py tags="[first_tag, second_tag]"`
+tags: ["dev"]
+
+# Set False to skip model training
+train: True
+
+# Evaluate on test set.
+test: True
+
+# Compile model for faster training with PyTorch 2.0
+compile: False
+
+# Simply provide checkpoint path to resume training
+ckpt_path: null
+
+# Seed for random number generators in PyTorch, NumPy and standard random module
+seed: null

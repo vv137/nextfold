@@ -1,0 +1,30 @@
+defaults:
+  - alphafold_multimer_shared
+  - _self_
+
+data:
+  train:
+    max_msa_clusters: 252
+    max_extra_msa: 1152
+  eval:
+    max_msa_clusters: 252
+    max_extra_msa: 1152
+
+model:
+  embeddings_and_evoformer:
+    triangle_multiplication_outgoing:
+      fuse_projection_weights: false
+    triangle_multiplication_incoming:
+      fuse_projection_weights: false
+  template:
+    template_pair_stack:
+      triangle_multiplication_outgoing:
+        fuse_projection_weights: false
+    triangle_multiplication_incoming:
+      fuse_projection_weights: false
+  extra_msa:
+    extra_msa_stack:
+      fuse_projection_weights: false
+
+globals:
+  name: alphafold_model_3_multimer_v2

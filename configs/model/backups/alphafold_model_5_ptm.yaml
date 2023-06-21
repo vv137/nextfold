@@ -1,0 +1,11 @@
+defaults:
+  - alphafold_monomer_shared
+  - _self_
+
+model:
+  heads:
+    predicted_aligned_error:
+      weight: 0.1
+
+globals:
+  name: alphafold_model_5_ptm

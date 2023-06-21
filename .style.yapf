@@ -1,0 +1,9 @@
+[style]
+based_on_style = facebook
+coalesce_brackets = true
+column_limit = 110
+spaces_before_comment = 4
+split_complex_comprehension = true
+allow_split_before_default_or_named_assigns = true
+dedent_closing_brackets = true
+split_arguments_when_comma_terminated = true
